@@ -21,19 +21,35 @@ public class HomePageTest extends TestBase{
 		homepage = new HomePage();
 	}
 	
-	@Test
-	public void validateFreeCRMLogo() {
-		homepage.validateLogo();
-	}
+//	@Test
+//	public void validateFreeCRMLogo() {
+//		homepage.validateLogo();
+//	}
 	
-	@Test
-	public void enterDataToUserName() {
-		homepage.enterDataIntoUsername();
-	}
 	
 	@Test
 	public void validateTitle() {
 		System.out.println(homepage.validateTitle());
+	}
+	
+	@Test
+	public void clickOnSlideShowRightSide() {
+		homepage.clickOnSlideShowRightButton();
+	}
+	
+	@Test
+	public void clickOnCRMContactsSignUpButton() {
+		homepage.clickOnCRMContactsSignUpButton();
+	}
+	
+	@Test
+	public void moveToSection() {
+		homepage.moveToSectionUsingJS();
+	}
+	
+	@Test
+	public void doLogin() {
+		homepage.doLogin(properties.getProperty("username"), properties.getProperty("password"));
 	}
 	
 	@AfterMethod
